@@ -1,0 +1,85 @@
+body{
+    height: 2000px;
+}
+
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 68px;
+    width: 100%;
+    background-color: rgba(170, 170, 170, 0.5);
+    z-index: 100;
+}
+.navigation-main {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: flex;
+}
+
+.nav-li{
+    display: flex;
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    display: inline-block;
+    width: 20px;
+}
+.logo img {
+    width: 100px;
+}
+
+.nav-1 {
+    
+    color: whitesmoke;
+    background-color: #283535;
+    font-size: 18px;
+    font-family: 'ALK Sanet';
+    font-weight: bold;
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-left: 10px;
+    transition-property: all;
+    transition-delay: 0.3s;
+    transition-duration: 0.5s;
+}
+
+.nav-1:hover{
+    background-color: #f56060;
+    height: 70px;
+}
+
+.activate{
+    background-color: #f56060;
+    height: 70px;
+}
+
+.footer {    
+    background-color: #283535;
+    height: 500px;
+    width: 1200px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2%;
+    height: 100%;
+}
+
+.box{
+    width: 30%;
+    height: 100%;
+    background-color: #7c7c7c33;
+    
+}
