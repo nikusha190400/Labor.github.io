@@ -194,6 +194,7 @@ body {
 .nav-1:hover {
   background-color: #f56060;
   height: 70px;
+  color: aliceblue;
 }
 
 .activate {
