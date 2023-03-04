@@ -1,0 +1,377 @@
+//colors
+$main-color: #65656566;
+$lbr-black: #283535;
+$lbr-red:#f56060;
+
+//a
+a{
+    text-decoration: none;
+    color: #fff;
+    font-family: "ALK Sanet";
+}
+a:hover{
+    color: $lbr-red;
+}
+
+//post style
+%post {
+    display: flex;
+    padding: 3%;
+    cursor: pointer;
+}
+%pst {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: $main-color;
+    padding: 2%;
+    transition: all 0.5s ease;
+    max-height: 500px;
+}
+%post-title {
+    font-family: 'ALK Sanet';
+    font-size: 36px;
+    text-align: center;
+    color: aliceblue;
+    position: absolute;
+    width: 100%;
+}
+%post-img{
+    width: 80%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+%post-dscr {
+    font-family: "ALK Life", sans-serif;
+    font-size: 16px;
+    color: aliceblue;
+    margin: 10px 20px;
+}
+.bttn{
+    align-items: baseline;
+    
+}
+//post-end
+//button-start
+.btn {
+    position: relative;
+    top: 100%;
+    left: 60%;
+    transform: translate(-50% -50%);
+    background: white;
+    padding: 17px 30px;
+    text-transform: uppercase;
+    font-family: "ALK Sanet", sans-serif;
+    letter-spacing: 0.1em;
+    border: none;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .btn:hover {
+    background: $lbr-red;
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px $lbr-red;
+    color: $lbr-red;
+  }
+  
+  .btn::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #283535;
+  }
+  
+  span {
+    position: relative;
+    z-index: 0;
+  }
+  
+  i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  i::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 2px;
+    background: $main-color;
+    transform: translate(-50%) skewX(325deg);
+    transition: 0.5s;
+  }
+  
+  i:hover::before {
+    width: 20px;
+    left: 20%;
+  }
+  
+  i::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 20px;
+    height: 2px;
+    background: $main-color;
+    transform: translate(-50%) skewX(325deg);
+    transition: 0.5s;
+  }
+  
+  i:hover::after {
+    width: 10px;
+    left: 80%;
+  }
+//button-end
+body{
+    height: 2000px;
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50%;
+    
+}
+
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 68px;
+    width: 100%;
+    background-color: rgba(170, 170, 170, 0.5);
+    z-index: 100;
+}
+.navigation-main {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: flex;
+}
+
+.nav-li{
+    display: flex;
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    display: inline-block;
+    width: 20px;
+}
+.logo img {
+    width: 100px;
+}
+
+.nav-1 {
+    
+    color: whitesmoke;
+    background-color: #283535;
+    font-size: 18px;
+    font-family: 'ALK Sanet';
+    font-weight: bold;
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-left: 10px;
+    transition-property: all;
+    transition-delay: 0.3s;
+    transition-duration: 0.5s;
+}
+
+.nav-1:hover{
+    background-color: $lbr-red;
+    height: 70px;
+}
+
+.activate{
+    background-color: $lbr-red;
+    height: 70px;
+}
+// post-start
+.post1 {
+    @extend %post;
+
+}
+.pst1 {
+    @extend %pst;
+}
+.pst1 h1 {
+    @extend %post-title;
+}
+.pst1 img{
+  @extend %post-img;
+}
+.pst1:hover {
+    background-color: #283535
+    
+} 
+.pst1 p {
+    @extend %post-dscr;
+}
+//post-end
+.footer {    
+    background-color: #283535;
+    height: 500px;
+    width: 1200px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2%;
+    height: 100%;
+}
+
+.box{
+    width: 30%;
+    height: 100%;
+    background-color: #7c7c7c33;
+    
+}
+section{
+    display: flex;
+    margin: 150px 0;
+}
+.section1{
+    margin: 0;
+}
+
+/* contact */
+
+.contact {
+    margin-top: 100px;
+    width: 100%;
+    height: 700px;
+    background-color: #283535;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: start;
+    padding-top: 3%;
+}
+.textarea {
+    position: absolute;
+    width: 60%;
+    left: 5%;
+}
+
+.textarea textarea {
+    resize: none;
+    width: 100%;
+    height: 250px;
+    margin-right: 50px;
+}
+
+.info {
+    position: absolute;
+    right: 5%;
+    width: 25%;
+    height: 250px;
+    padding-top:0 ;
+    align-items: start;
+}
+
+
+.info input {
+    height: 50px;
+    width: 250px;
+    align-items:center;
+    margin: calc(50px/3) 0;
+    transition-property: all;
+    transition-delay: 0s;
+    transition-duration: 0.5s;
+}
+.info input:hover{
+    background-color: rgb(193, 239, 241);
+    border: none;
+    outline: none;
+    color: aliceblue;
+    font-weight: bold;
+    
+}
+
+.info input:focus{
+    background-color: rgb(193, 239, 241);
+    border: none;
+    outline: none;
+}
+
+.info input:nth-child(1){
+    margin-top: 0;
+}
+
+.info button {
+    height: 50px;
+    width: 250px;
+    align-items:center;
+    background-color:rgb(0, 143, 164);
+    border: none;
+    margin-top: 0;
+    transition-property: all;
+    transition-delay: 0s;
+    transition-duration: 0.5s;
+}
+
+.info button:hover{
+    color: aliceblue;
+    font-weight: bold;
+    background-color:rgb(100, 220, 239);
+}
+
+//footer-start
+footer{
+    position: relative;
+    display: flex;
+    margin: 250px 0;
+    width: 100%;
+    height: 400px;
+    background: $lbr-black;
+    padding: 0.5%;
+}
+.footer1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background: $main-color;
+}
+.footer2{
+    display: block;
+    justify-content: center;
+}
+.footer2 h1 {
+    font-family: 'ALK Sanet';
+    font-size: 28px;
+    text-align: center;
+    color: aliceblue;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.footer2 p{
+    font-family: 'ALK Sanet';
+    font-size: 16px;
+    color: aliceblue;
+    width: 100%;
+}
+//footer-end
